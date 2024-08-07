@@ -7,7 +7,7 @@ const Stack = createStackNavigator();
 const App = () => {
   return (
     <Stack.Navigator initialRouteName="home">
-      <Stack.Screen name="home" component={Home} />
+      <Stack.Screen name="플로깅 시작하기" component={Home} />
     </Stack.Navigator>
   );
 };
