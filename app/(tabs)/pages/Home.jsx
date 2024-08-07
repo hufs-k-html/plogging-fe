@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Image, Text, TouchableOpacity } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires, no-undef
 const plogging_image = require('../../../assets/image/homePlogging.png');
@@ -7,6 +8,7 @@ const plogging_image = require('../../../assets/image/homePlogging.png');
 const Home = () => {
   return (
     <View className="flex-1 bg-white items-center">
+      <StatusBar style="dark" />
       <Image source={plogging_image} className="resize-contain" />
       <View className="border border-black rounded-xl w-4/5 p-3 bg-white absolute top-64">
         <Text className="pl-2 mb-3">현재까지</Text>
