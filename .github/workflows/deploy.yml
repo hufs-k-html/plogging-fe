@@ -16,8 +16,7 @@ jobs:
     runs-on: ubuntu-latest # Ubuntu 최신 버전에서 실행
 
     steps:
-      - name: Checkout repository # 리포지토리 소스 체크아웃 단계
-        uses: actions/checkout@v4 # actions/checkout@v4 액션 사용
+      - uses: actions/checkout@v4 # actions/checkout@v4 액션 사용
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
