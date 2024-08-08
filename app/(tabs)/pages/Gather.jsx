@@ -48,7 +48,7 @@ const getBackgroundColor = (area) => {
 
 const Gather = () => {
   return (
-    <SafeAreaView className="flex-1" style={styles.safeAreaView}>
+    <SafeAreaView className="flex-1 bg-white">
       <StatusBar style="dark" />
       <View className="border-b border-gray py-4 items-center">
         <Text className="text-xl">플로깅 함께해요</Text>
@@ -56,16 +56,10 @@ const Gather = () => {
       <ScrollView>
         <Image source={ploggingGather} className="resize-contain" />
         <View className="flex-1 px-4">
-          <Text
-            style={styles.currentText}
-            className="text-base text-gray-500 pl-2 mb-2"
-          >
+          <Text className="text-base text-gray pl-2 mb-2">
             현재 모집 중인 플로깅
           </Text>
-          <Text
-            style={styles.currentText}
-            className="text-base text-gray-500 pl-2 mb-4"
-          >
+          <Text className="text-base text-gray pl-2 mb-4">
             총 {sampleData.length}개
           </Text>
           {sampleData.map((item, index) => (
@@ -84,9 +78,7 @@ const Gather = () => {
                 <Text className="text-gray mt-2">
                   인원: {item.currentPeople}/{item.maxPeople} 명
                 </Text>
-                <Text className="mt-2" style={styles.dateText}>
-                  일정: {item.date}
-                </Text>
+                <Text className="mt-2 text-blue">일정: {item.date}</Text>
               </View>
             </View>
           ))}
@@ -94,25 +86,6 @@ const Gather = () => {
       </ScrollView>
     </SafeAreaView>
   );
-};
-
-const styles = {
-  safeAreaView: {
-    backgroundColor: '#fff',
-  },
-  currentText: {
-    color: '#97A5A4',
-  },
-  area: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: 60,
-    height: 60,
-    borderRadius: 30,
-  },
-  dateText: {
-    color: '#3182F7',
-  },
 };
 
 export default Gather;

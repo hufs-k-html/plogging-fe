@@ -8,6 +8,7 @@ module.exports = {
       black: '#000000',
       blue: '#3182F7',
       red: '#C63939',
+      green: '#2DB400',
     },
     extend: {},
   },
