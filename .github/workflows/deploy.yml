@@ -16,20 +16,10 @@ jobs:
     runs-on: ubuntu-latest # Ubuntu 최신 버전에서 실행
 
     steps:
-      - name: Checkout repository # 리포지토리 소스 체크아웃 단계
-        uses: actions/checkout@v4 # actions/checkout@v4 액션 사용
+      - uses: actions/checkout@v4 # actions/checkout@v4 액션 사용
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
-
-      - name: Cache node_modules # node_modules 캐시 단계
-        id: cache # 캐시 단계의 ID 설정
-        uses: actions/cache@v3 # actions/cache@v3 액션 사용
-        with:
-          path: '**/node_modules' # 캐시할 경로 설정
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }} # 캐시 키 설정
-          restore-keys: |
-            ${{ runner.os }}-node- # 복원 키 설정
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
