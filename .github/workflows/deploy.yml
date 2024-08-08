@@ -7,7 +7,7 @@ on:
       - main # main 브랜치에 푸시될 때 실행
 
 env:
-  ORG_NAME: 2024-k-html
+  ORG_NAME: hufs-k-html
   PROJECT_NAME: plogging
   SERVICE_NAME: user-app
 
