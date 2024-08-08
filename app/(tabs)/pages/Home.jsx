@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import {
   View,
@@ -12,7 +13,7 @@ import { StatusBar } from 'expo-status-bar';
 // eslint-disable-next-line @typescript-eslint/no-var-requires, no-undef
 const plogging_image = require('../../../assets/image/homePlogging.png');
 
-const Home = () => {
+const Home = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.safeAreaView} className="flex-1 items-center">
       <StatusBar style="dark" />
@@ -44,6 +45,7 @@ const Home = () => {
         </View>
       </View>
       <TouchableOpacity
+        onPress={() => navigation.navigate('plogging')}
         style={styles.startPlogging}
         className="w-40 h-40 rounded-full mt-36 justify-center items-center"
       >
